@@ -98,10 +98,10 @@ fn main() -> Result<()> {
     );
     // println!("cargo:rustc-link-search=native=/usr/lib");
 
-    println!("cargo:rustc-link-lib={link_type}=slangwrapper");
+    println!("cargo:rustc-link-lib=static=slangwrapper");
     println!("cargo:rustc-link-lib={link_type}=svlang");
     println!("cargo:rustc-link-lib={link_type}=fmt");
-    println!("cargo:rustc-link-lib={link_type}=mimalloc");
+    println!("cargo:rustc-link-lib=static=mimalloc");
     println!("cargo:rustc-link-lib=dylib=stdc++");
 
     bindings
